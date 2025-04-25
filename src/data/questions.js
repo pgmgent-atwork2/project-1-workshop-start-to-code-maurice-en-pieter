@@ -1,4 +1,4 @@
-export default questions = [
+const questionArray = [
     {
       question: "De aarde draait om de zon.",
       answer: true
@@ -80,4 +80,5 @@ export default questions = [
       answer: false
     }
 ]
-  
+
+export default questionArray;
