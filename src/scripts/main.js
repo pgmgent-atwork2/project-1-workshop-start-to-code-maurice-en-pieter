@@ -9,6 +9,7 @@ const $falseButton = document.querySelector(".button--false");
 
 function game() {
     initButtons();
+    visualizePoints()
     playerTurn(currentPlayer);
 }
 
@@ -74,7 +75,7 @@ function visualizePoints() {
         child.classList.remove('current');
     }
     if (player1Score < playerProgress[0].children.length) {
-        playerProgress[0].children[player1Score].classList.add('current');
+        playerProgress[0].children[player1Score+1].classList.add('current');
     }
 
     //Player 2
@@ -82,6 +83,6 @@ function visualizePoints() {
         child.classList.remove('current');
     }
     if (player2Score < playerProgress[1].children.length) {
-        playerProgress[1].children[player2Score].classList.add('current');
+        playerProgress[1].children[player2Score+1].classList.add('current');
     }
 }
