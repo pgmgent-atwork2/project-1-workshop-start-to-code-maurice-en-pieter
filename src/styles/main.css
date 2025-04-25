@@ -2,3 +2,6 @@
 @import './components/home/buttons.css';
 @import './components/home/quiz.css';
 @import './components/home/background.css';
+@import './components/game/title.css';
+@import './components/game/playertitle.css';
+@import './components/game/progress.css';
