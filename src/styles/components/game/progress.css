@@ -1,3 +1,9 @@
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
 .quiz__game {
     display: flex;
     flex-direction: column;
@@ -15,22 +21,50 @@
     width: 400px;
     padding: 0 10px;
 }
- 
+
+.progress::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background-color: #ACACA6;
+    z-index: 0;
+}
+
+.progress__line {
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    height: 2px;
+    background-color: #4B81BD;
+    z-index: 1;
+    transition: width 0.3s ease;
+}
+
 .progress__div {
+    position: relative;
     width: 15px;
     height: 15px;
     background: #fff;
     border: 2px solid #ACACA6;
     border-radius: 50%;
     cursor: pointer;
-    transition: background 1s;
+    transition: all 0.3s ease;
+    z-index: 2;
 }
 
 .progress__div.current {
-    border: 2px solid #4B81BD;   
+    border: 2px solid #4B81BD;
+    transform: scale(1.2);
 }
 
 .progress__div.completed {
     background: #4B81BD;
     border: 2px solid #4B81BD;   
+}
+
+.progress__div:hover {
+    transform: scale(1.2);
 }
