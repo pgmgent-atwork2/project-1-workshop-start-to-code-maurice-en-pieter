@@ -48,6 +48,7 @@ function checkAnswer(givenAnswer, correctAnswer) {
     console.log(`Player 1: ${player1Score}, Player 2: ${player2Score}`);
 
     currentPlayer = currentPlayer === 1 ? 2 : 1;
+    visualizePoints();
     setTimeout(() => playerTurn(currentPlayer), 200);
 }
 
@@ -58,7 +59,20 @@ function showQuestion(randomIndex) {
 
 function showTurn() {
     const $showTurn = document.querySelector('.quiz__player-turn');
-    $showTurn.innerHTML = `Speler ${currentPlayer} aan de beurt`;
+    $showTurn.innerHTML = `Speler ${currentPlayer} is aan de beurt`;
 }
 
 game();
+
+
+function visualizePoints() {
+    const playerProgress = document.querySelectorAll('.progress')
+    
+    for (const child of playerProgress[0].children) {
+        child.classList.remove('current')
+    } playerProgress[0].children[player1Score].classList.add('current')
+
+    for (const child of playerProgress[1].children) {
+        child.classList.remove('current')
+    } playerProgress[1].children[player1Score].classList.add('current')
+}
