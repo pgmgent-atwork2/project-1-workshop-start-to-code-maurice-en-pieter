@@ -1,55 +1,54 @@
-import questionArray from "../data/questions.js"
+import questionArray from "../data/questions.js";
 
-let player1Score, player2Score = 0
-
+let player1Score = 0, player2Score = 0;
 let currentPlayer = 1;
-let currentAnswer = null
+let currentCorrectAnswer = null;
 
+const $trueButton = document.querySelector(".button--true");
+const $falseButton = document.querySelector(".button--false");
 
 function game() {
-    playerTurn(1);
-
-   
-}
-
-
-
-
-
-
-
-function playerTurn(playerId) {
-    const answer = null
-    // show player turn
-    showTurn(playerId);
-
-    // generate new question
-    const randomIndex = Math.floor(Math.random() * questionArray.length);
-    showQuestion(randomIndex);
-
-    // check if buttons are pressed
     initButtons();
-    
-    checkAnswer(answer, randomIndex);
-
-    // check if answer is correct
-    // add points to user
-    // switch turn
+    playerTurn(currentPlayer);
 }
 
 function initButtons() {
-    const $trueButton = document.querySelector(".button--true");
-    const $falseButton = document.querySelector(".button--false");
+    $trueButton.addEventListener("click", () => {
+        handleAnswer(true);
+    });
 
-    $trueButton.addEventListener('click', () => {
-        console.log("pressed true");
-        answer = true;
-    })
+    $falseButton.addEventListener("click", () => {
+        handleAnswer(false);
+    });
+}
 
-    $falseButton.addEventListener('click', () => {
-        console.log("pressed false");
-        answer = false;
-    })
+function playerTurn(playerId) {
+    showTurn(playerId);
+
+    const randomIndex = Math.floor(Math.random() * questionArray.length);
+    const question = questionArray[randomIndex];
+
+    currentCorrectAnswer = question.answer;
+    showQuestion(randomIndex);
+}
+
+function handleAnswer(givenAnswer) {
+    checkAnswer(givenAnswer, currentCorrectAnswer);
+}
+
+function checkAnswer(givenAnswer, correctAnswer) {
+    if (givenAnswer === correctAnswer) {
+        console.log('Correct');
+        currentPlayer === 1 ? player1Score++ : player2Score++;
+    } else {
+        console.log('Incorrect');
+        currentPlayer === 1 ? player2Score++ : player1Score++;
+    }
+
+    console.log(`Player 1: ${player1Score}, Player 2: ${player2Score}`);
+
+    currentPlayer = currentPlayer === 1 ? 2 : 1;
+    setTimeout(() => playerTurn(currentPlayer), 200);
 }
 
 function showQuestion(randomIndex) {
@@ -59,11 +58,7 @@ function showQuestion(randomIndex) {
 
 function showTurn() {
     const $showTurn = document.querySelector('.quiz__player-turn');
-    $showTurn.innerHTML = `Speler ${currentPlayer} aan de beurt`
-}
-
-function checkAnswer() {
-    if
+    $showTurn.innerHTML = `Speler ${currentPlayer} aan de beurt`;
 }
 
 game();
