@@ -1,0 +1,23 @@
+.home__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.home__button {
+    font-family: monospace;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.home__button:hover {
+  background-color: #0056b3;
+}
