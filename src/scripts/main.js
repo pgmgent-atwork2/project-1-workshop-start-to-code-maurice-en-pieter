@@ -30,6 +30,8 @@ function playerTurn(playerId) {
 
     currentCorrectAnswer = question.answer;
     showQuestion(randomIndex);
+
+    visualizePoints();
 }
 
 function handleAnswer(givenAnswer) {
@@ -48,7 +50,6 @@ function checkAnswer(givenAnswer, correctAnswer) {
     console.log(`Player 1: ${player1Score}, Player 2: ${player2Score}`);
 
     currentPlayer = currentPlayer === 1 ? 2 : 1;
-    visualizePoints();
     setTimeout(() => playerTurn(currentPlayer), 200);
 }
 
@@ -66,13 +67,21 @@ game();
 
 
 function visualizePoints() {
-    const playerProgress = document.querySelectorAll('.progress')
+    const playerProgress = document.querySelectorAll('.progress');
     
+    //Player 1
     for (const child of playerProgress[0].children) {
-        child.classList.remove('current')
-    } playerProgress[0].children[player1Score].classList.add('current')
+        child.classList.remove('current');
+    }
+    if (player1Score < playerProgress[0].children.length) {
+        playerProgress[0].children[player1Score].classList.add('current');
+    }
 
+    //Player 2
     for (const child of playerProgress[1].children) {
-        child.classList.remove('current')
-    } playerProgress[1].children[player1Score].classList.add('current')
+        child.classList.remove('current');
+    }
+    if (player2Score < playerProgress[1].children.length) {
+        playerProgress[1].children[player2Score].classList.add('current');
+    }
 }
