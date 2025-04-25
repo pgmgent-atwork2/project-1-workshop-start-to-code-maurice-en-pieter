@@ -1,4 +1,3 @@
-
 .box {
     position: fixed;
     top: 0;
@@ -10,9 +9,9 @@
     position: absolute;
     top: 3%;
     left: 10%;
-    width: 1500px;
-    height: 1300px;
-    margin: -250px 0 0 -150px;
+    width: 800px;         
+    height: 700px;        
+    margin: -125px 0 0 -75px;  
     border-radius: 43%;
     transform-origin: 50% 48%;
     background: #0af;

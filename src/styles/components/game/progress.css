@@ -50,7 +50,6 @@
     background: #fff;
     border: 2px solid #ACACA6;
     border-radius: 50%;
-    cursor: pointer;
     transition: all 0.3s ease;
     z-index: 2;
 }
