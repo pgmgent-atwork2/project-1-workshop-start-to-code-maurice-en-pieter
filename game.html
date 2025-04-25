@@ -14,24 +14,26 @@
 
 <body>
 
-    <div class='box'>
+    <!-- <div class='box'>
         <div class='wave one'></div>
         <div class='wave two'></div>
         <div class='wave three'></div>
-    </div>
+    </div> -->
     <header class="header">
         <a class="header__link" href="./index.html"><img class="header__image" src="./src/assets/home.png"
                 alt="Home"></a>
     </header>
 
     <main class="quiz">
-        <h1 class="quiz__question">Quizvraag</h1>
-        <p class="quiz__player-turn">Speler x is aan de beurt</p>
-
-        <p class="quiz__answer"></p>
+        <div class="quiz__content">
+            <h1 class="quiz__question">Quizvraag</h1>
+            <p class="quiz__player-turn">Speler x is aan de beurt</p>
+    
+            <p class="quiz__answer">Juist</p>
+        </div>
 
         <section class="quiz__game">
-            <div class="progress">
+            <div class="progress progress--player1">
                 <div class="progress__line"></div>
                 <div class="progress__div current"></div>
                 <div class="progress__div"></div>
@@ -46,7 +48,7 @@
                 <div class="progress__div"></div>
             </div>
 
-            <div class="progress">
+            <div class="progress progress--player2">
                 <div class="progress__line"></div>
                 <div class="progress__div current"></div>
                 <div class="progress__div"></div>

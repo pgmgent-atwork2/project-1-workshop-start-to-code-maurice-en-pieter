@@ -5,11 +5,42 @@
     align-items: center;
     height: 100vh;
     font-family: "Major Mono Display", monospace;
-
+    gap: 8rem;
 }
 
+.quiz__content {
+    width: 50%;
+    z-index: 2;
+}
+
+.quiz__player-turn,
+.quiz__answer {
+    text-align: center;
+    color: #434343;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: monospace;
+}
+
+.quiz__answer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quiz__game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5rem;
+}
 
 .quiz__question {
-    margin-top: 6rem;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: monospace;
+    text-align: center;
 }
 

@@ -24,6 +24,7 @@ function initButtons() {
 }
 
 function playerTurn(playerId) {
+    document.querySelector(".quiz__answer").innerHTML = ""
     showTurn(playerId);
 
     const randomIndex = Math.floor(Math.random() * questionArray.length);
@@ -40,18 +41,18 @@ function handleAnswer(givenAnswer) {
 }
 
 function checkAnswer(givenAnswer, correctAnswer) {
+    const $showAnswer = document.querySelector(".quiz__answer");
     if (givenAnswer === correctAnswer) {
-        console.log('Correct');
         currentPlayer === 1 ? player1Score++ : player2Score++;
+        $showAnswer.innerHTML = "Correct!"
     } else {
         console.log('Incorrect');
         currentPlayer === 1 ? player2Score++ : player1Score++;
+        $showAnswer.innerHTML = "Incorrect!"
     }
 
-    console.log(`Player 1: ${player1Score}, Player 2: ${player2Score}`);
-
     currentPlayer = currentPlayer === 1 ? 2 : 1;
-    setTimeout(() => playerTurn(currentPlayer), 200);
+    setTimeout(() => playerTurn(currentPlayer), 1000);
 }
 
 function showQuestion(randomIndex) {
@@ -76,6 +77,7 @@ function visualizePoints() {
     }
     if (player1Score < playerProgress[0].children.length) {
         playerProgress[0].children[player1Score+1].classList.add('current');
+        playerProgress[0].children[player1Score+1].classList.add('completed');
     }
 
     //Player 2
@@ -84,5 +86,6 @@ function visualizePoints() {
     }
     if (player2Score < playerProgress[1].children.length) {
         playerProgress[1].children[player2Score+1].classList.add('current');
+        playerProgress[1].children[player2Score+1].classList.add('completed');
     }
 }
