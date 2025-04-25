@@ -1,8 +1,36 @@
 .quiz__game {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.progress {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    padding: 0 10px;
+}
+ 
+.progress__div {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 2px solid #ACACA6;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.progress__div.current {
+    border: 2px solid #4B81BD;   
+}
+
+.progress__div.completed {
+    background: #4B81BD;
+    border: 2px solid #4B81BD;   
 }

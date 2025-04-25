@@ -1,0 +1,21 @@
+.header {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.header__link {
+    display: block;
+    text-decoration: none;
+}
+
+.header__image {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.2s ease;
+}
+
+.header__image:hover {
+    transform: scale(1.1);
+}
