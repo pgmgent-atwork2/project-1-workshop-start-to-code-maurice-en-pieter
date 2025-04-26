@@ -3,12 +3,11 @@
 @import './components/home/quiz.css';
 @import './components/home/background.css';
 @import './components/game/title.css';
-@import './components/game/playertitle.css';
 @import './components/game/progress.css';
 @import './components/game/header.css';
-@import './components/game/buttons.css';
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: monospace;
+    font-size: 1rem;
     margin: 0;
 }

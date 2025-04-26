@@ -1,25 +1,23 @@
-.quiz{
+.quiz {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: "Major Mono Display", monospace;
     gap: 8rem;
-}
-
-.quiz__content {
-    width: 50%;
-    z-index: 2;
-}
-
-.quiz__player-turn,
-.quiz__answer {
     text-align: center;
+}
+
+.quiz__question {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.quiz__turn,
+.quiz__answer,
+.quiz__link {
     color: #434343;
-    font-size: 1.5rem;
     font-weight: 400;
-    font-family: monospace;
 }
 
 .quiz__answer {
@@ -28,19 +26,16 @@
     transform: translateX(-50%);
 }
 
-.quiz__game {
+.quiz__progress {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 5rem;
+    gap: 4rem;
 }
 
-.quiz__question {
-    font-size: 2rem;
-    font-weight: 500;
-    font-family: monospace;
-    text-align: center;
+.quiz__player--1 {
+    color: var(--player1-color)
 }
-
+.quiz__player--2 {
+    color: var(--player2-color)
+}

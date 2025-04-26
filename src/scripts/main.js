@@ -6,7 +6,7 @@ let currentAnswer = null;
 let isWaiting = false;
 
 const $questionDisplay = document.querySelector('.quiz__question');
-const $playerTurnDisplay = document.querySelector('.quiz__player-turn');
+const $playerTurnDisplay = document.querySelector('.quiz__turn');
 const $trueButton = document.querySelector(".button--true");
 const $falseButton = document.querySelector(".button--false");
 
@@ -32,7 +32,7 @@ function initButtons() {
 
 function playerTurn() {
     document.querySelector(".quiz__answer").innerHTML = "";
-    $playerTurnDisplay.innerHTML = `Speler ${currentPlayer} is aan de beurt`;
+    $playerTurnDisplay.innerHTML = `<span class="quiz__player--${currentPlayer}">Speler ${currentPlayer}</span> is aan de beurt`;
 
     const randomQuestion = questionArray[Math.floor(Math.random() * questionArray.length)];
     currentAnswer = randomQuestion.answer;
@@ -63,12 +63,14 @@ function updatePoints() {
     const playerPoints = document.querySelectorAll('.progress');
     const scores = [player1Score, player2Score];
 
-    playerPoints.forEach((progress, index) => {
-        for (const child of progress.children) {
-            child.classList.remove('current');
+    playerPoints.forEach((points, index) => {
+        for (const child of points.children) {
+            child.classList.remove('progress__step--current');
         }
-        if (scores[index] < progress.children.length) {
-            progress.children[scores[index] + 1].classList.add('current', 'completed');
+        if (scores[index] < points.children.length) {
+            if(scores[index] < 10) {
+                points.children[scores[index]].classList.add('progress__step--current', 'progress__step--completed');
+            }
         }
     });
 

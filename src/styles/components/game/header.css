@@ -1,7 +1,7 @@
 .header {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 1.5rem;
+    right: 2rem;
     z-index: 100;
 }
 
@@ -10,12 +10,12 @@
     text-decoration: none;
 }
 
-.header__image {
+.header__icon {
     width: 2.5rem;
     height: 2.5rem;
     transition: transform 0.2s ease;
 }
 
-.header__image:hover {
+.header__icon:hover {
     transform: scale(1.1);
 }

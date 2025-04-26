@@ -1,3 +1,8 @@
+:root {
+    --player1-color: #4B81BD;
+    --player2-color: #bd4b4b;
+}
+
 .progress {
     position: relative;
     display: flex;
@@ -7,23 +12,23 @@
 }
 
 .progress--player1 {
-    .progress__div.completed {
-        background: #4B81BD;
+    .progress__step--completed {
+        background: var(--player1-color);
     }
-    .progress__div.current {
+    .progress__step--current {
         background: white;
-        border: 2px solid #4B81BD;
+        border: 2px solid var(--player1-color);
         transform: scale(1.2);
     }
 }
 
 .progress--player2 {
-    .progress__div.completed {
-        background: #bd4b4b;
+    .progress__step--completed {
+        background: var(--player2-color);
     }
-    .progress__div.current {
+    .progress__step--current {
         background: white;
-        border: 2px solid #bd4b4b;
+        border: 2px solid var(--player2-color);
         transform: scale(1.2);
     }
 }
@@ -39,17 +44,7 @@
     z-index: 0;
 }
 
-.progress__line {
-    position: absolute;
-    top: 12px;
-    left: 15px;
-    height: 2px;
-    background-color: #4B81BD;
-    z-index: 1;
-    transition: width 0.3s ease;
-}
-
-.progress__div {
+.progress__step {
     position: relative;
     width: 25px;
     height: 25px;
