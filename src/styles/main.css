@@ -1,8 +1,8 @@
 @import './base/reset.css';
 @import './components/home/buttons.css';
-@import './components/home/quiz.css';
+@import './components/home/home.css';
 @import './components/home/background.css';
-@import './components/game/title.css';
+@import './components/game/quiz.css';
 @import './components/game/progress.css';
 @import './components/game/header.css';
 
