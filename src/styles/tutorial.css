@@ -1,19 +1,32 @@
 .tutorial {
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #e8e8e8;
+}
+
+.tutorial__image {
+    box-shadow: #00000059 0px 5px 15px;
+    max-width: 40rem;
+    border-radius: 0.5rem;
+}
+
+.tutorial__item,
+.tutorial__highlight {
+    color: #0af;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 pre code {
     background-color: #1e1f1f;
     color: #D4D4D4;
     display: block;
-    max-width: 60rem;
+    max-width: 55rem;
     padding: 1rem;
     overflow-x: scroll;
     font-family: monospace;
     font-size: 14px;
     line-height: 1.5;
-
 }
   
 .tag {
