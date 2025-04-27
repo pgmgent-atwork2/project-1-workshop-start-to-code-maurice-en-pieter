@@ -5,8 +5,13 @@
 @import './components/game/quiz.css';
 @import './components/game/progress.css';
 @import './components/game/header.css';
+@import './tutorial.css';
 
 body {
     font-family: monospace;
     margin: 0;
+    background-color: #ededed;
 }
+
+
+

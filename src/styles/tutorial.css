@@ -1,0 +1,37 @@
+.tutorial {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+pre code {
+    background-color: #1e1f1f;
+    color: #D4D4D4;
+    display: block;
+    max-width: 60rem;
+    padding: 1rem;
+    overflow-x: scroll;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.5;
+
+}
+  
+.tag {
+    color: #679AD2;
+}
+
+.attr {
+    color: #AADAFA;
+}
+
+.string {
+    color: #C5947C;
+}
+
+.text {
+    color: #D4D4D4;
+}
+
+.comment {
+    color: #74985C;
+}
