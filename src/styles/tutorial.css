@@ -18,6 +18,8 @@
 }
 
 pre code {
+    border-radius: 0.5rem;
+    box-shadow: #00000059 0px 5px 15px;
     background-color: #1e1f1f;
     color: #D4D4D4;
     display: block;

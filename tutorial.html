@@ -56,14 +56,14 @@
                     </li>
                 </ul>
             </section>
-            <section class="tutorial__step">
+            <section class="step">
                 <h2>Stap 2: HTML</h2>
-                <ul>
+                <p>HTML vormt de basis van je website. Gebruikersinteractie volgt later.</p>
+                <ul class="step__list">
                     <li>
                         2.1 Kopieer onderstaande code in het <span class="tutorial__highlight">index.html</span> bestand. Dit is de basis stuctuur van een webpagina.
                         <pre>
-                            <code>
-&lt;<span class="tag">!DOCTYPE </span><span class="attr">html</span>&gt;
+<code>&lt;<span class="tag">!DOCTYPE </span><span class="attr">html</span>&gt;
 &lt;<span class="tag">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;
 
 &lt;<span class="tag">head</span>&gt;
@@ -80,25 +80,77 @@
 &lt;<span class="tag">body</span>&gt;
     &lt;<span class="tag">main</span> <span class="attr">class</span>=<span class="string">&quot;quiz&quot;</span>&gt;
 
+    <span class="comment">&lt;!-- Voeg hier code toe --&gt;</span>
+
     &lt;/<span class="tag">main</span>&gt;
     &lt;<span class="tag">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span> <span class="attr">src</span>=<span class="string">&quot;./src/scripts/main.js&quot;</span>&gt;&lt;/<span class="tag">script</span>&gt;
 &lt;/<span class="tag">body</span>&gt;
 &lt;/<span class="tag">html</span>&gt;
-                            </code>
+</code>
+                          </pre>
+                    </li>
+                    <br>
+                        2.2 Voeg nu deze code toe aan je index.html, tussen de <span class="tutorial__highlight">&lt;main&gt;</span> en <span class="tutorial__highlight">&lt;/main&gt;</span> tags.
+                        
+                        <pre>
+<code>&lt;<span class="tag">section</span> <span class="attr">class</span>=<span class="string">&quot;quiz__content&quot;</span>&gt;
+    &lt;<span class="tag">h1</span> <span class="attr">class</span>=<span class="string">&quot;quiz__question&quot;</span>&gt;<span class="text">Quizvraag</span>&lt;/<span class="tag">h1</span>&gt;
+    &lt;<span class="tag">p</span> <span class="attr">class</span>=<span class="string">&quot;quiz__turn&quot;</span>&gt;
+        &lt;<span class="tag">span</span> <span class="attr">class</span>=<span class="string">&quot;quiz__player--1&quot;</span>&gt;<span class="text">Speler x</span>&lt;/<span class="tag">span</span>&gt; 
+        <span class="text">is aan de beurt</span>
+    &lt;/<span class="tag">p</span>&gt;
+    &lt;<span class="tag">p</span> <span class="attr">class</span>=<span class="string">&quot;quiz__answer&quot;</span>&gt;&lt;/<span class="tag">p</span>&gt;
+&lt;/<span class="tag">section</span>&gt;
+</code>
                           </pre>
                     </li>
                     <li>
-                        2.2 
+                        2.3 Voeg onder bovenstaande code ook deze code toe.
+                        <pre>
+<code>
+&lt;<span class="tag">section</span> <span class="attr">class</span>=<span class="string">"buttons"</span>&gt;
+    &lt;<span class="tag">button</span> <span class="attr">class</span>=<span class="string">"button button--true"</span>&gt;Juist&lt;/<span class="tag">button</span>&gt;
+    &lt;<span class="tag">button</span> <span class="attr">class</span>=<span class="string">"button button--false"</span>&gt;Fout&lt;/<span class="tag">button</span>&gt;
+&lt;/<span class="tag">section</span>&gt;
+</code>
+                        </pre>
+                        Nu zal je webpagina er zo uitzien, een titel met subtitel en twee knoppen.
+                        <img class="tutorial__image" alt="Start van webpagina" src="./src/assets/screenshot7.png">
                     </li>
                     <li>
-                        2.3 
+                        2.4 Tussen de section met klasses <span class="tutorial__highlight">"quiz__content"</span> en <span class="tutorial__highlight">"quiz__buttons"</span> voeg je volgende code toe.<br>
+                        Deze code zal nog niet visueels toevoegen, maar later worden dit de voortgangsbalken van de spelers.
+                        <pre>
+<code>&lt;<span class="tag">section</span> <span class="attr">class</span>=<span class="string">&quot;quiz__progress&quot;</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress progress--player1&quot;</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step progress__step--current&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+
+    &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress progress--player2&quot;</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step progress__step--current&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress__step&quot;</span>&gt;&lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">section</span>&gt;</code>
+                          </pre>
                     </li>
-                    <li>
-                        2.4 
-                    </li>
-                    <li>
-                        2.5 
-                    </li>
+
                 </ul>
             </section>
         </section>
