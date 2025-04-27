@@ -18,11 +18,16 @@
 }
 
 .step {
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 
 .step__item {
-    margin-top: 3rem;
+    margin-top: 4rem;
+    line-height: 2rem;
+}
+
+pre {
+    margin-bottom: 0.5rem;
 }
 
 pre code {
@@ -37,7 +42,7 @@ pre code {
     overflow-y: scroll;
     font-family: monospace;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.5rem;
 }
   
 .tag {

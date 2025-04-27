@@ -299,8 +299,7 @@
                     <li class="step__item">
                         4.2 In <span class="tutorial__highlight">app.js</span> schrijf je helemaal bovenaan je bestand deze code.<br>
                         We importeren de array van vragen en initialiseren enkele variabelen die we later gaan gebruiken.
-                        <pre>
-<code><span class="symbol">import </span><span class="attr">questionArray </span><span class="symbol">from </span><span class="string">"../data/questions.js"</span>;
+<pre><code><span class="symbol">import </span><span class="attr">questionArray </span><span class="symbol">from </span><span class="string">"../data/questions.js"</span>;
  
 <span class="tag">let</span> <span class="attr">player1Score</span> = <span class="value">0</span>, <span class="attr">player2Score</span> = <span class="value">0</span>;
 <span class="tag">let</span> <span class="attr">currentPlayer</span> = <span class="value">1</span>;
@@ -316,77 +315,174 @@
                     </li>
                     <li class="step__item">
                         4.3 Voeg nu onder de initialisatie deze lege functies toe.
-<pre><code>function startGame() {
-    initButtons();
-    updatePoints();
-    playerTurn();
+<pre><code><span class="tag">function</span> <span class="selector">startGame</span>() {
+    <span class="selector">initButtons</span>();
+    <span class="selector">updatePoints</span>();
+    <span class="selector">playerTurn</span>();
 }
 
-function playerTurn() {
-
-}
-
-function initButtons() {
+<span class="tag">function</span> <span class="selector">playerTurn</span>() {
 
 }
 
-function updatePoints() {
+<span class="tag">function</span> <span class="selector">initButtons</span>() {
 
 }
 
-startGame();
+<span class="tag">function</span> <span class="selector">updatePoints</span>() {
+
+}
+
+<span class="selector">startGame</span>();
 </code></pre>
+                           
                     </li>
                     <li class="step__item">
                         4.4 Nu gaan we een random vraag tonen op de website.<br>
                         Schrijf in de functie <span class="tutorial__highlight">playerTurn()</span> onderstaande code.<br>
                         Hierin halen we een random vraag uit de array, en tonen we deze in <span class="tutorial__highlight">$questionDisplay</span>.
                         <pre>
-<code><span class="tag">function </span><span class="selector">playerTurn() </span>{
-    <span class="tag">const </span><span class="var">randomQuestion</span> = <span class="var">questionArray</span>[<span class="attr">Math</span>.<span class="selector">floor</span>(<span class="attr">Math</span>.<span class="selector">random</span>() * <span class="var">questionArray</span>.<span class="attr">length</span>)];
-    </span><span class="var">$questionDisplay</span>.<span class="attr">innerHTML</span> = <span class="var">randomQuestion</span>.<span class="attr">question</span>;
-}
+<code>
+<span class="tag">function</span> <span class="var">playerTurn</span><span class="symbol">()</span> <span class="symbol">{</span>
+    <span class="tag">const</span> <span class="var">randomQuestion</span> <span class="symbol">=</span> <span class="var">questionArray</span><span class="symbol">[</span><span class="attr">Math</span>.<span class="attr">floor</span><span class="symbol">(</span><span class="attr">Math</span>.<span class="attr">random</span><span class="symbol">()</span> <span class="symbol">*</span> <span class="var">questionArray</span>.<span class="attr">length</span><span class="symbol">)</span><span class="symbol">];</span>
+    <span class="var">$questionDisplay</span>.<span class="attr">innerHTML</span> <span class="symbol">=</span> <span class="var">randomQuestion</span>.<span class="attr">question</span><span class="symbol">;</span>
+    <span class="var">currentAnswer</span> <span class="symbol">=</span> <span class="var">randomQuestion</span>.<span class="attr">answer</span><span class="symbol">;</span>
+
+    <span class="comment">// Hier komt nog code...</span>
+<span class="symbol">}</span>
 </code></pre>
-                        Roep nu als test deze funtie op door onderaan je code <span class="tutorial__highlight">playerTurn();</span> te schrijven.
                         Als je nu je website herlaad, wordt er elke keer een random quizvraag getoont.
                     </li>
                     <li class="step__item">
                         4.5 Nu gaan we tonen welke speler aan de beurt is. Dit doen we aan de hand van de variabele <span class="tutorial__highlight">currentPlayer</span>.<br>
                         Voeg in de functie <span class="tutorial__highlight">playerTurn()</span> deze lijn code toe.
-<pre><code>$playerTurnDisplay.innerHTML = `&lt;span class="quiz__player--${currentPlayer}"&gt;Speler ${currentPlayer}&lt;/span&gt; is aan de beurt`;
+<pre><code><span class="var">$playerTurnDisplay</span>.<span class="attr">innerHTML</span> = <span class="string">`&lt;span class="quiz__player--${<span class="var">currentPlayer</span>}"&gt;Speler ${<span class="var">currentPlayer</span>}&lt;/span&gt; is aan de beurt`</span>;
 </code></pre>
                         Hiermee tonen we de variabele <span class="tutorial__highlight">currentPlayer</span> op de website.
                     </li>
                     <li class="step__item">
                         4.6 Vervolgens willen we onze knoppen laten werken. Schrijf deze code in de functie <span class="tutorial__highlight">initButtons()</span><br>
-                        De <span class="tutorial__highlight">isWaiting</span> variabele nodig om spammen tegen te houden. Enkel wanneer deze true is, kunnen we drukken op de knop
-<pre><code>function initButtons() {
-    $trueButton.addEventListener("click", () => {
-        if (!isWaiting) {
-            alert('True');
+                        De <span class="tutorial__highlight">isWaiting</span> variabele is nodig om spammen tegen te houden. Enkel wanneer deze true is, kunnen we drukken op een knop
+<pre><code><span class="tag">function</span> <span class="selector">initButtons</span>() {
+    <span class="var">$trueButton</span>.<span class="selector">addEventListener</span>(<span class="string">"click"</span>, () => {
+        <span class="symbol">if</span> (!<span class="var">isWaiting</span>) {
+            <span class="selector">alert</span>(<span class="string">'Op juist gedrukt'</span>); <span class="comment">//wordt in stap 4.8 aangepast</span>
         }
     });
 
-    $falseButton.addEventListener("click", () => {
-        if (!isWaiting) {
-            alert('False');
+    <span class="var">$falseButton</span>.<span class="selector">addEventListener</span>(<span class="string">"click"</span>, () => {
+        <span class="symbol">if</span> (!<span class="var">isWaiting</span>) {
+            <span class="selector">alert</span>(<span class="string">'Op fout gedrukt'</span>); <span class="comment">//wordt in stap 4.8 aangepast</span>
         }
     });
 }
 </code></pre>
-                        Voor nu schrijven we een alert als we op een knop drukken. Later passen we dit aan.
+                        Voor nu schrijven we een alert als we op een knop drukken. Later passen we dit aan.<br>
+                        Test dit eens door op de knoppen te drukken.
                         <img class="tutorial__image" alt="Alert op de game page" src="./src/assets/screenshot10.png">
                     </li>
                     <li class="step__item">
-                        4.7 Nu willen we de punten van de spelers kunnen zien. In index.html hebben we per speler 10 divs die elk voor een punt staan.<br>
-                        
+                        4.7 Nu willen we de punten van de spelers kunnen zien. In index.html hebben we per speler een progress bar met 10 stappen.<br>
+                        De huidige score van de spelers wordt aangeduid door de klas "progress__step--current".<br>
+                        De juist beantwoorde vragen worden aangetoond met "progress__step--completed". Wijzig updatePoints().<br><br>
+                        Deze functie haalt de twee elementen met de klasse .progress op en verwijdert bij ieder child-element de klasse progress__step--current.<br>
+                        Vervolgens voegt hij, afhankelijk van de score per speler (maximaal 9), de klassen progress__step--current en progress__step--completed toe aan het juiste stap-element.
+<pre><code><span class="tag">function</span> <span class="selector">updatePoints</span>() {
+    <span class="tag">const</span> <span class="var">playerPoints</span> = <span class="attr">document</span>.<span class="selector">querySelectorAll</span>(<span class="string">'.progress'</span>);
+    <span class="tag">const</span> <span class="var">scores</span> = [<span class="var">player1Score</span>, <span class="var">player2Score</span>];
+
+    <span class="var">playerPoints</span>.<span class="selector">forEach</span>((<span class="var">points</span>, <span class="var">index</span>) => {
+        <span class="symbol">for</span> (<span class="tag">const</span> <span class="var">child</span> of <span class="var">points</span>.<span class="attr">children</span>) {
+            <span class="var">child</span>.<span class="attr">classList</span>.<span class="selector">remove</span>(<span class="string">'progress__step--current'</span>);
+        }
+        <span class="symbol">if</span> (<span class="var">scores</span>[<span class="var">index</span>] &lt; <span class="var">points</span>.<span class="attr">children</span>.<span class="attr">length</span>) {
+            <span class="symbol">if</span>(<span class="var">scores</span>[<span class="var">index</span>] &lt; <span class="value">10</span>) {
+                <span class="var">points</span>.<span class="attr">children</span>[<span class="var">scores</span>[<span class="var">index</span>]].<span class="attr">classList</span>.<span class="selector">add</span>(<span class="string">'progress__step--current'</span>, <span class="string">'progress__step--completed'</span>);
+            }
+        }
+    });
+
+    <span class="symbol">if</span> (<span class="var">player1Score</span> &gt; <span class="value">9</span>) {
+        <span class="selector">playerWins</span>(<span class="value">1</span>);
+    } <span class="symbol">else if</span> (<span class="var">player2Score</span> &gt; <span class="value">9</span>) {
+        <span class="selector">playerWins</span>(<span class="value">2</span>);
+    }
+}
+</code></pre>
+
+                        Vergeet ook niet om deze functie onderaan in playerTurn() op te roepen!<br>
+                        Test deze functie door bovenaan je code de waardes van player1Score en player2Score aan te passen naar een getal onder de 10.<br>
+                        Je zal zien dat de gekleurde circles van plaats veranderen.
                     </li>
-                    <li class="step__item"></li>
-                    <li class="step__item"></li>
-                    <li class="step__item"></li>
-                    <li class="step__item"></li>
+                    <li class="step__item">
+                        4.8 De volgende stap is zorgen dat we vragen kunnen antwoorden door de knoppen te gebruiken.<br>
+                        Dit doen we door een nieuwe funtie checkAnswer() te maken. We geven deze functie 2 dingen mee; het laatst gegeven antwoord en het correcte antwoord.<br>
+                        Als deze twee gelijk zjin, geven we de huidige speler een punt. Als deze niet gelijk zijn geven we de andere speler een punt. <br>
+                        Dit wordt ook getoont in de $answerDisplay. Aan het eind van de functie switchen we van speler en voeren we een delay uit van 1000ms.
+<pre><code><span class="tag">function</span> <span class="selector">checkAnswer</span>(<span class="var">givenAnswer</span>, <span class="var">correctAnswer</span>) {
+    <span class="var">isWaiting</span> = <span class="tag">true</span>;
+
+    <span class="symbol">if</span> (<span class="var">givenAnswer</span> === <span class="var">correctAnswer</span>) {
+        <span class="var">currentPlayer</span> === <span class="value">1</span> ? <span class="var">player1Score</span>++ : <span class="var">player2Score</span>++;
+        <span class="var">$answerDisplay</span>.<span class="attr">innerHTML</span> = <span class="string">`Correct! Speler ${<span class="var">currentPlayer</span>} +1 punt`</span>;
+    } <span class="symbol">else</span> {
+        <span class="var">currentPlayer</span> === <span class="value">1</span> ? <span class="var">player2Score</span>++ : <span class="var">player1Score</span>++;
+        <span class="var">$answerDisplay</span>.<span class="attr">innerHTML</span> = <span class="string">`Incorrect! Speler ${<span class="var">currentPlayer</span> === <span class="value">1</span> ? <span class="value">2</span> : <span class="value">1</span>} +1 punt`</span>;
+    }
+
+    <span class="var">currentPlayer</span> = <span class="var">currentPlayer</span> === <span class="value">1</span> ? <span class="value">2</span> : <span class="value">1</span>;
+
+    <span class="selector">setTimeout</span>(() => { <span class="selector">playerTurn</span>() }, <span class="value">1000</span>);
+}
+</code></pre>
+
+                        Voer deze functie uit in plaat van de geschreven alert in de initButtons() functie.<br>
+                        Geef true mee als er Juist knop wordt gedrukt, en false mee als er op de fout knop wordt gedrukt.
+<pre><code><span class="selector">checkAnswer</span>(<span class="tag">true</span>, <span class="var">currentAnswer</span>);
+</code></pre>
+<pre><code><span class="selector">checkAnswer</span>(<span class="tag">false</span>, <span class="var">currentAnswer</span>);
+</code></pre>
+                        Als we nu op onze knoppen drukken zien we dat er 'Correct' of 'Incorrect' komt te staan en ook wie het punt krijt.
+                    </li>
+                    <li class="step__item">
+                        4.9 Nu moeten we zorgen dat nadat er op een knop wordt gedrukt, de volgende ronde goed wordt gestart.<br>
+                        Wis na iedere vraag het $answerDisplay en zet de variabele isWaiting terug op false. <br>
+                        Voeg deze twee lijnen code toe aan de functie playerTurn();
+<pre><code><span class="var">$answerDisplay</span>.<span class="attr">innerHTML</span> = <span class="string">""</span>;
+<span class="var">isWaiting</span> = <span class="tag">false</span>;
+</code></pre>
+
+                        Nu zal de het spel volledig werken en kan je om de beurt een vraag beantwoorden.<br>
+                        Het enige wat nu nog mist is een winnaar...
+                    </li>
+                    <li class="step__item">
+                        4.10 We maken een nieuwe functie genaamd playerWins(). Deze functie geef je het id van een speler mee, 1 of 2.<br>
+                        In deze functie maken we de twee knoppen onzichtbaar, en geven we weer welke speler is gewonnen in $questionDisplay.<br>
+                        Ook maken we een manier om het spel opnieuw te spelen, door een link naar de pagina te tonen in $playerTurnDisplay.
+<pre><code><span class="tag">function</span> <span class="selector">playerWins</span>(<span class="var">playerId</span>) {
+    <span class="var">$trueButton</span>.<span class="attr">style</span>.<span class="attr">display</span> = <span class="string">"none"</span>;
+    <span class="var">$falseButton</span>.<span class="attr">style</span>.<span class="attr">display</span> = <span class="string">"none"</span>;
+    <span class="var">$questionDisplay</span>.<span class="attr">innerHTML</span> = <span class="string">`Speler ${<span class="var">playerId</span>} wint het spel!`</span>;
+    <span class="var">$playerTurnDisplay</span>.<span class="attr">innerHTML</span> = <span class="string">"&lt;a class='quiz__link' href='/game.html'&gt;Speel nog eens&lt;/a&gt;"</span>;
+}
+</code></pre>
+
+                        Nu moeten we deze functie oproepen, wanneer een speler 10 puntent heeft.
+                        Deze code controleert of er een speler 10 punten heeft, en roept dan de functie playerWins() op mt het juiste Id.<br>
+                        Voeg deze code onderaan in de functie updatePoints() toe.
+<pre><code>
+<span class="symbol">if</span> (<span class="var">player1Score</span> &gt; <span class="value">9</span>) {
+    <span class="selector">playerWins</span>(<span class="value">1</span>);
+} <span class="symbol">else if</span> (<span class="var">player2Score</span> &gt; <span class="value">9</span>) {
+    <span class="selector">playerWins</span>(<span class="value">2</span>);
+}
+</code></pre>
+
+                    </li>
                 </ul>
             </section>
+
+            <p>Klaar! Nu zou je een werkende 1-tegen-1 quiz minigame moeten hebben. Je kan makkelijk je eigen vragen toevoegen in het questions.js bestand</p>
         </section>
     </main>
     

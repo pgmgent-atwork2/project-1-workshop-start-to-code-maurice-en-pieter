@@ -32,14 +32,15 @@ function initButtons() {
 }
 
 function playerTurn() {
-    $answerDisplay.innerHTML = "";
+    const randomQuestion = questionArray[Math.floor(Math.random() * questionArray.length)];
+    $questionDisplay.innerHTML = randomQuestion.question;
+    currentAnswer = randomQuestion.answer;
+
     $playerTurnDisplay.innerHTML = `<span class="quiz__player--${currentPlayer}">Speler ${currentPlayer}</span> is aan de beurt`;
 
-    const randomQuestion = questionArray[Math.floor(Math.random() * questionArray.length)];
-    currentAnswer = randomQuestion.answer;
-    $questionDisplay.innerHTML = randomQuestion.question;
-
     updatePoints();
+
+    $answerDisplay.innerHTML = "";
     isWaiting = false;
 }
 
@@ -74,9 +75,9 @@ function updatePoints() {
         }
     });
 
-    if (player1Score >= 10) {
+    if (player1Score > 9) {
         playerWins(1);
-    } else if (player2Score >= 10) {
+    } else if (player2Score > 9) {
         playerWins(2);
     }
 }
