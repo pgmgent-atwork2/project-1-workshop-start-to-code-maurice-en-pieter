@@ -7,6 +7,7 @@ let isWaiting = false;
 
 const $questionDisplay = document.querySelector('.quiz__question');
 const $playerTurnDisplay = document.querySelector('.quiz__turn');
+const $answerDisplay = document.querySelector(".quiz__answer");
 const $trueButton = document.querySelector(".button--true");
 const $falseButton = document.querySelector(".button--false");
 
@@ -31,7 +32,7 @@ function initButtons() {
 }
 
 function playerTurn() {
-    document.querySelector(".quiz__answer").innerHTML = "";
+    $answerDisplay.innerHTML = "";
     $playerTurnDisplay.innerHTML = `<span class="quiz__player--${currentPlayer}">Speler ${currentPlayer}</span> is aan de beurt`;
 
     const randomQuestion = questionArray[Math.floor(Math.random() * questionArray.length)];
@@ -44,7 +45,6 @@ function playerTurn() {
 
 function checkAnswer(givenAnswer, correctAnswer) {
     isWaiting = true;
-    const $answerDisplay = document.querySelector(".quiz__answer");
 
     if (givenAnswer === correctAnswer) {
         currentPlayer === 1 ? player1Score++ : player2Score++;
