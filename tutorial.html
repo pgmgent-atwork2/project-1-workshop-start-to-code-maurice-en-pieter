@@ -74,7 +74,7 @@
     &lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="string">&quot;preconnect&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://fonts.gstatic.com&quot;</span> <span class="attr">crossorigin</span>&gt;
     &lt;<span class="tag">link</span> <span class="attr">href</span>=<span class="string">&quot;https://fonts.googleapis.com/css2?family=Major+Mono+Display&amp;display=swap&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;
 
-    &lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./src/styles/main.css&quot;</span>&gt;
+    &lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./css/main.css&quot;</span>&gt;
 &lt;/<span class="tag">head</span>&gt;
 
 &lt;<span class="tag">body</span>&gt;
@@ -151,6 +151,148 @@
                           </pre>
                     </li>
 
+                </ul>
+            </section>
+            <section class="step">
+                <h2>Stap 3: CSS</h2>
+                <p>CSS zorgt voor de vormgeving en stijl van je website.</p>
+                <ul class="step__list">
+                    <li>
+                        3.1 Plak deze code in je <span class="tutorial__highlight">main.css</span> bestand. Dit geeft een mooie layout aan het spel.
+                        Alle kleuren kun je zelf kiezen en aanpassen, hoe je zelf de game eruit wil laten zien.
+                        <pre>
+<code><span class="selector">body {</span>
+    <span class="attr">font-family</span>: <span class="string">monospace</span>;
+    <span class="attr">margin</span>: <span class="value">0</span>;
+    <span class="attr">background-color</span>: #efefef;
+<span class="selector">}</span>
+
+<span class="selector">.quiz {</span>
+    <span class="attr">display</span>: <span class="string">flex</span>;
+    <span class="attr">flex-direction</span>: <span class="string">column</span>;
+    <span class="attr">justify-content</span>: <span class="string">center</span>;
+    <span class="attr">align-items</span>: <span class="string">center</span>;
+    <span class="attr">height</span>: <span class="value">100vh</span>;
+    <span class="attr">gap</span>: <span class="value">8rem</span>;
+    <span class="attr">text-align</span>: <span class="string">center</span>;
+<span class="selector">}</span>
+
+<span class="selector">.quiz__content {</span>
+    <span class="attr">font-size</span>: <span class="value">1.5rem</span>;
+<span class="selector">}</span>
+
+<span class="selector">.quiz__question {</span>
+    <span class="attr">font-size</span>: <span class="value">2rem</span>;
+    <span class="attr">font-weight</span>: <span class="value">500</span>;
+<span class="selector">}</span>
+
+<span class="selector">.quiz__turn, .quiz__answer, .quiz__link {</span>
+    <span class="attr">color</span>: #7e7e7e;
+    <span class="attr">font-weight</span>: <span class="value">400</span>;
+<span class="selector">}</span>
+
+<span class="selector">.quiz__answer {</span>
+    <span class="attr">position</span>: <span class="string">absolute</span>;
+    <span class="attr">left</span>: <span class="value">50%</span>;
+    <span class="attr">transform</span>: <span class="value">translateX(-50%)</span>;
+<span class="selector">}</span>
+
+<span class="selector">.quiz__progress {</span>
+    <span class="attr">display</span>: <span class="string">flex</span>;
+    <span class="attr">flex-direction</span>: <span class="string">column</span>;
+    <span class="attr">align-items</span>: <span class="string">center</span>;
+    <span class="attr">gap</span>: <span class="value">4rem</span>;
+<span class="selector">}</span>
+
+<span class="selector">.quiz__player--1 {</span>
+    <span class="attr">color</span>: #4b81bd;
+<span class="selector">}</span>
+
+<span class="selector">.quiz__player--2 {</span>
+    <span class="attr">color</span>: #bd4b4b;
+<span class="selector">}</span>
+
+<span class="selector">.progress {</span>
+    <span class="attr">position</span>: <span class="string">relative</span>;
+    <span class="attr">display</span>: <span class="string">flex</span>;
+    <span class="attr">justify-content</span>: <span class="string">space-between</span>;
+    <span class="attr">width</span>: <span class="value">500px</span>;
+    <span class="attr">padding</span>: <span class="value">0 10px</span>;
+<span class="selector">}</span>
+
+<span class="selector">.progress--player1 {</span>
+    <span class="selector">.progress__step--completed {</span>
+        <span class="attr">background</span>: #4b81bd;
+    <span class="selector">}</span>
+    <span class="selector">.progress__step--current {</span>
+        <span class="attr">background</span>: #efefef;
+        <span class="attr">border</span>: <span class="value">2px solid #4b81bd</span>;
+        <span class="attr">transform</span>: <span class="value">scale(1.2)</span>;
+    <span class="selector">}</span>
+<span class="selector">}</span>
+
+<span class="selector">.progress--player2 {</span>
+    <span class="selector">.progress__step--completed {</span>
+        <span class="attr">background</span>: #bd4b4b;
+    <span class="selector">}</span>
+    <span class="selector">.progress__step--current {</span>
+        <span class="attr">background</span>: #efefef;
+        <span class="attr">border</span>: <span class="value">2px solid #bd4b4b</span>;
+        <span class="attr">transform</span>: <span class="value">scale(1.2)</span>;
+    <span class="selector">}</span>
+<span class="selector">}</span>
+
+<span class="selector">.progress::before {</span>
+    <span class="attr">content</span>: <span class="value">''</span>;
+    <span class="attr">position</span>: <span class="string">absolute</span>;
+    <span class="attr">top</span>: <span class="value">12px</span>;
+    <span class="attr">left</span>: <span class="value">15px</span>;
+    <span class="attr">right</span>: <span class="value">15px</span>;
+    <span class="attr">height</span>: <span class="value">2px</span>;
+    <span class="attr">background-color</span>: #7e7e7e;
+    <span class="attr">z-index</span>: <span class="value">0</span>;
+<span class="selector">}</span>
+
+<span class="selector">.progress__step {</span>
+    <span class="attr">position</span>: <span class="string">relative</span>;
+    <span class="attr">width</span>: <span class="value">25px</span>;
+    <span class="attr">height</span>: <span class="value">25px</span>;
+    <span class="attr">background</span>: #efefef;
+    <span class="attr">border</span>: <span class="value">2px solid #7e7e7e</span>;
+    <span class="attr">border-radius</span>: <span class="value">50%</span>;
+    <span class="attr">transition</span>: <span class="value">all 0.3s ease</span>;
+    <span class="attr">z-index</span>: <span class="value">2</span>;
+<span class="selector">}</span>
+
+<span class="selector">.buttons {</span>
+    <span class="attr">display</span>: <span class="string">flex</span>;
+    <span class="attr">justify-content</span>: <span class="string">center</span>;
+    <span class="attr">align-items</span>: <span class="string">center</span>;
+    <span class="attr">gap</span>: <span class="value">1.5rem</span>;
+    <span class="attr">font-size</span>: <span class="value">1rem</span>;
+<span class="selector">}</span>
+
+<span class="selector">.button {</span>
+    <span class="attr">background-color</span>: #77daff;
+    <span class="attr">color</span>: #333;    
+    <span class="attr">padding</span>: <span class="value">1rem 2rem</span>;
+    <span class="attr">border</span>: <span class="string">none</span>;
+    <span class="attr">border-radius</span>: <span class="value">.5rem</span>;
+    <span class="attr">cursor</span>: <span class="string">pointer</span>;
+<span class="selector">}</span>
+
+<span class="selector">.button:hover {</span>
+    <span class="attr">background-color</span>: #0af;
+    <span class="attr">color</span>: #fff;
+    <span class="attr">transition</span>: <span class="value">background-color 0.3s ease, color 0.3s ease</span>;
+<span class="selector">}</span>
+</code>
+                        </pre>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </ul>
             </section>
         </section>

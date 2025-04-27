@@ -20,7 +20,7 @@
 .quiz__turn,
 .quiz__answer,
 .quiz__link {
-    color: #434343;
+    color: var(--border-color);
     font-weight: 400;
 }
 

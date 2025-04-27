@@ -24,6 +24,7 @@ pre code {
     color: #D4D4D4;
     display: block;
     max-width: 55rem;
+    max-height: 40rem;
     padding: 1rem;
     overflow-x: scroll;
     font-family: monospace;
@@ -49,4 +50,12 @@ pre code {
 
 .comment {
     color: #74985C;
+}
+
+.selector {
+    color: #D2BB85;
+}
+
+.value {
+    color: #BACDAB;
 }
