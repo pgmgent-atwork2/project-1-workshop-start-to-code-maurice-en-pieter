@@ -86,7 +86,7 @@ function playerWins(playerId) {
     $trueButton.style.display = "none";
     $falseButton.style.display = "none";
     $questionDisplay.innerHTML = `Speler ${playerId} wint het spel!`;
-    $playerTurnDisplay.innerHTML = "<a class='quiz__link' href='/game.html'>Speel nog eens</a>";
+    $playerTurnDisplay.innerHTML = "<a class='quiz__link' href='javascript: location.reload();'>Speel nog eens</a>";
 }
 
 startGame();
