@@ -18,6 +18,9 @@
 
 .step {
   margin-top: 6rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+    box-shadow: #00000059 0px 5px 15px;
 }
 
 .step__item {
@@ -42,6 +45,7 @@ pre code {
   font-family: monospace;
   font-size: 14px;
   line-height: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .tag {
@@ -193,6 +197,7 @@ pre code {
   margin: 0 auto;
   padding: 2rem;
   line-height: 1.6;
+  margin-bottom: 4rem;
 }
 
 .step__title {
@@ -216,20 +221,23 @@ pre code {
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 1rem;
+  
 }
 
 .tutorial__image {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
 }
-
 .step__subtitle {
   font-size: 1.3rem;
   color: #333;
   font-weight: bold;
   display: inline;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #0af;
 }
 
 .step__content {
   margin-top: 2rem;
 }
+
