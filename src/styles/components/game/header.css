@@ -12,17 +12,15 @@
     z-index: 100;
 }
 
-.header__link {
-    display: block;
-    text-decoration: none;
+.header__link--right {
+    position: absolute;
+    right: 1rem;
 }
 
 .header__icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    transition: transform 0.2s ease;
+    width: 2rem;
+    height: 2rem;
 }
-
 .header__icon:hover {
     transform: scale(1.1);
 }
