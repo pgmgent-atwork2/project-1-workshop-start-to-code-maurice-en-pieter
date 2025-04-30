@@ -29,9 +29,9 @@
              <div class="tutorial__overview">
                 <p class="tutorial__text tutorial__text--highlight">Hiervoor gebruiken we 3 codetalen:</p>
                 <ul class="tutorial__list tutorial__list--languages">
-                <li class="tutorial__item tutorial__item--language">HTML</li>
-                <li class="tutorial__item tutorial__item--language">CSS</li>
-                <li class="tutorial__item tutorial__item--language">JavaScript</li>
+                    <li class="tutorial__item tutorial__item--language">HTML</li>
+                    <li class="tutorial__item tutorial__item--language">CSS</li>
+                    <li class="tutorial__item tutorial__item--language">JavaScript</li>
                 </ul>
             </div>
             <figure class="tutorial__figure">
@@ -57,12 +57,13 @@
                     </p>
                     <h3 class="step__subtitle">1.3 folderstructuur</h3>
                     <p class="step__item">
+                        Maak de mappen <span class="tutorial__highlight">css</span>, <span class="tutorial__highlight">data</span> en <span class="tutorial__highlight">scripts</span>, en de bestanden <span class="tutorial__highlight">main.css</span>, <span class="tutorial__highlight">app.js</span> en <span class="tutorial__highlight">index.html</span>.<br>
                         De map- en bestandsstructuur ziet er zo uit:
                         <img class="tutorial__image" alt="Maak map- en bestandsstructuur" src="./src/assets/screenshot4.png">
                     </p>
                     <h3 class="step__subtitle">1.4 Installatie Live server</h3>
                     <p class="step__item">
-                        Installeer de Live Server extensie in Visual Studio Code.
+                        Ga naar extensions en installeer de Live Server extensie in Visual Studio Code.
                         <img class="tutorial__image" alt="Installeer live server extensie" src="./src/assets/screenshot5.png">
                     </p>
                     <h3 class="step__subtitle">1.5 Opstarten van Live server</h3>
@@ -97,7 +98,7 @@
 &lt;<span class="tag">body</span>&gt;
     &lt;<span class="tag">main</span> <span class="attr">class</span>=<span class="string">&quot;quiz&quot;</span>&gt;
 
-    <span class="comment">&lt;!-- Voeg hier code toe --&gt;</span>
+    <span class="comment">&lt;!-- Voeg hier code toe in stappen 2.2, 2.3 en 2.4 --&gt;</span>
 
     &lt;/<span class="tag">main</span>&gt;
     &lt;<span class="tag">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span> <span class="attr">src</span>=<span class="string">&quot;./scripts/app.js&quot;</span>&gt;&lt;/<span class="tag">script</span>&gt;
@@ -171,7 +172,8 @@
             </section>
             <section class="step">
                 <h2 class="step__title">Stap 3: CSS</h2>
-                <p class="step__text">CSS zorgt voor de vormgeving en stijl van je website.</p>
+                <p class="step__text">CSS zorgt voor de vormgeving en stijl van je website. In deze taal spreken we elementen uit het index.html bestand aan 
+                    en geven we ze bapaalde eigenschappen zoals groottes, kleuren, positionering en font-stijlen</p>
                 <div class="step__content">
                     <h3 class="step__subtitle">3.1 CSS toevoegen</h3>
                     <p class="step__item">
@@ -311,7 +313,13 @@
             </section>
             <section class="step">
                 <h2 class="step__title">Stap 4: JavaScript</h2>
-                <p class="step__text">JavaScript geeft functionaliteit aan het spel.</p>
+                <p class="step__text">JavaScript geeft functionaliteit aan het spel. Enkele basistermen van JavaScript:</p>
+                <ul class="tutorial__list tutorial__list--terms">
+                    <li class="tutorial__item tutorial__item--terms"><span class="tutorial__highlight">const & let:</span> Dit zijn variabelen. Const kan je niet aanpassen en let wel.</li>
+                    <li class="tutorial__item tutorial__item--terms"><span class="tutorial__highlight">function:</span> Dit declareert een functie waarmee je code kunt uitvoeren en optioneel parameters kunt meegeven.</li>
+                    <li class="tutorial__item tutorial__item--terms"><span class="tutorial__highlight">// :</span> Dit is comentaar. Het heeft geen invloed op de code.</li>
+                    <li class="tutorial__item tutorial__item--terms"><span class="tutorial__highlight">array :</span> Een geordende lijst waarin je meerdere waarden kunt opslaan in één variabele.</li>
+                </ul>
                 <div class="step__content">
                     <h3 class="step__subtitle">4.1 databestand downloaden</h3>
                     <p class="step__item">
@@ -367,14 +375,13 @@
                         Nu gaan we een random vraag tonen op de website.<br>
                         Schrijf in de functie <span class="tutorial__highlight">playerTurn()</span> onderstaande code.<br>
                         Hierin halen we een random vraag uit de array, en tonen we deze in <span class="tutorial__highlight">$questionDisplay</span>.
-                        <pre>
-<code>
-<span class="tag">function</span> <span class="var">playerTurn</span><span class="symbol">()</span> <span class="symbol">{</span>
+<pre><code><span class="tag">function</span> <span class="var">playerTurn</span><span class="symbol">()</span> <span class="symbol">{</span>
     <span class="tag">const</span> <span class="var">randomQuestion</span> <span class="symbol">=</span> <span class="var">questionArray</span><span class="symbol">[</span><span class="attr">Math</span>.<span class="attr">floor</span><span class="symbol">(</span><span class="attr">Math</span>.<span class="attr">random</span><span class="symbol">()</span> <span class="symbol">*</span> <span class="var">questionArray</span>.<span class="attr">length</span><span class="symbol">)</span><span class="symbol">];</span>
     <span class="var">$questionDisplay</span>.<span class="attr">innerHTML</span> <span class="symbol">=</span> <span class="var">randomQuestion</span>.<span class="attr">question</span><span class="symbol">;</span>
     <span class="var">currentAnswer</span> <span class="symbol">=</span> <span class="var">randomQuestion</span>.<span class="attr">answer</span><span class="symbol">;</span>
 
-    <span class="comment">// Hier komt nog code...</span>
+    <span class="comment">// Hier komt nog code in stap 4.5, 4.7 en 4.9</span>
+    
 <span class="symbol">}</span>
 </code></pre>
             <p class="step__item">Als je nu je website herlaad, wordt er elke keer een random quizvraag getoont.</p>
@@ -387,7 +394,7 @@
 </code></pre>
             <p class="step__item">Hiermee tonen we de variabele <span class="tutorial__highlight">currentPlayer</span> op de website.</p>
                     </p>
-                    <h3 class="step__subtitle">4.6 Antwoord knoppen laten werken</h3>
+                    <h3 class="step__subtitle">4.6 Antwoord-knoppen laten werken</h3>
                     <p class="step__item">
                         Vervolgens willen we onze knoppen laten werken. Schrijf deze code in de functie <span class="tutorial__highlight">initButtons()</span><br>
                         De <span class="tutorial__highlight">isWaiting</span> variabele is nodig om spammen tegen te houden. Enkel wanneer deze true is, kunnen we drukken op een knop
@@ -405,16 +412,16 @@
     });
 }
 </code></pre>
-                        <p class="step__item">Voor nu schrijven we een alert als we op een knop drukken. Later passen we dit aan.<br>
-                        Test dit eens door op de knoppen te drukken.</p>
+                        <p class="step__item">Voor nu schrijven we een <span class="tutorial__highlight">alert</span> als we op een knop drukken. Later passen we dit aan.<br>
+                        Test dit eens door op de knoppen te drukken. Je zal een melding in de browser krijgen.</p>
                         <img class="tutorial__image" alt="Alert op de game page" src="./src/assets/screenshot10.png">
                     </p>
                     <h3 class="step__subtitle">4.7 Score spelers laten tonen</h3>
 
                     <p class="step__item">
-                        Nu willen we de punten van de spelers kunnen zien. In index.html hebben we per speler een progress bar met 10 stappen.<br>
-                        De huidige score van de spelers wordt aangeduid door de klas "progress__step--current".<br>
-                        De juist beantwoorde vragen worden aangetoond met "progress__step--completed". Wijzig updatePoints().<br><br>
+                        Nu willen we de punten van de spelers kunnen zien. In <span class="tutorial__highlight">index.html</span> hebben we per speler een progress bar met 10 stappen.<br>
+                        De huidige score van de spelers wordt aangeduid door de klas <span class="tutorial__highlight">"progress__step--current"</span>.<br>
+                        De juist beantwoorde vragen worden aangetoond met <span class="tutorial__highlight">"progress__step--completed"</span>. Wijzig de functie <span class="tutorial__highlight">updatePoints()</span>.<br><br>
                         Deze functie haalt de twee elementen met de klasse .progress op en verwijdert bij ieder child-element de klasse progress__step--current.<br>
                         Vervolgens voegt hij, afhankelijk van de score per speler (maximaal 9), de klassen progress__step--current en progress__step--completed toe aan het juiste stap-element.
 <pre><code><span class="tag">function</span> <span class="selector">updatePoints</span>() {
@@ -432,24 +439,21 @@
         }
     });
 
-    <span class="symbol">if</span> (<span class="var">player1Score</span> &gt; <span class="value">9</span>) {
-        <span class="selector">playerWins</span>(<span class="value">1</span>);
-    } <span class="symbol">else if</span> (<span class="var">player2Score</span> &gt; <span class="value">9</span>) {
-        <span class="selector">playerWins</span>(<span class="value">2</span>);
-    }
+    <span class="comment">// Voeg hier nog code toe in stap 4.10</span>
+    
 }
 </code></pre>
 
-<p class="step__item">Vergeet ook niet om deze functie onderaan in playerTurn() op te roepen!<br>
+<p class="step__item">Vergeet ook niet om deze functie onderaan in <span class="tutorial__highlight">playerTurn()</span> op te roepen!<br>
                         Test deze functie door bovenaan je code de waardes van player1Score en player2Score aan te passen naar een getal onder de 10.<br>
                         Je zal zien dat de gekleurde circles van plaats veranderen.</p>
                     </p>
                     <h3 class="step__subtitle">4.8 quizvragen beantwoorden doormiddel van knoppen</h3>
                     <p class="step__item">
                         De volgende stap is zorgen dat we vragen kunnen antwoorden door de knoppen te gebruiken.<br>
-                        Dit doen we door een nieuwe funtie checkAnswer() te maken. We geven deze functie 2 dingen mee; het laatst gegeven antwoord en het correcte antwoord.<br>
+                        Dit doen we door een nieuwe funtie <span class="tutorial__highlight">checkAnswer()</span> te maken. We geven deze functie 2 dingen mee; het laatst gegeven en het correcte antwoord.<br>
                         Als deze twee gelijk zjin, geven we de huidige speler een punt. Als deze niet gelijk zijn geven we de andere speler een punt. <br>
-                        Dit wordt ook getoont in de $answerDisplay. Aan het eind van de functie switchen we van speler en voeren we een delay uit van 1000ms.
+                        Dit wordt ook getoont in de <span class="tutorial__highlight">$answerDisplay</span>. Aan het eind van de functie switchen we van speler en voeren we een <span class="tutorial__highlight">delay</span> uit van 1000ms.
 <pre><code><span class="tag">function</span> <span class="selector">checkAnswer</span>(<span class="var">givenAnswer</span>, <span class="var">correctAnswer</span>) {
     <span class="var">isWaiting</span> = <span class="tag">true</span>;
 
@@ -467,19 +471,20 @@
 }
 </code></pre>
 
-<p class="step__item">Voer deze functie uit in plaat van de geschreven alert in de initButtons() functie.<br>
-                        Geef true mee als er Juist knop wordt gedrukt, en false mee als er op de fout knop wordt gedrukt.</p>
+<p class="step__item">Voer deze functie uit in plaat van de geschreven alert in de <span class="tutorial__highlight">initButtons()</span> functie.<br>
+                        Geef true mee als er Juist knop wordt gedrukt, en false mee als er op de Fout knop wordt gedrukt.</p>
 <pre><code><span class="selector">checkAnswer</span>(<span class="tag">true</span>, <span class="var">currentAnswer</span>);
 </code></pre>
 <pre><code><span class="selector">checkAnswer</span>(<span class="tag">false</span>, <span class="var">currentAnswer</span>);
 </code></pre>
-<p class="step__item">Als we nu op onze knoppen drukken zien we dat er 'Correct' of 'Incorrect' komt te staan en ook wie het punt krijgt.</p>
+<p class="step__item">Als we nu op onze knoppen drukken zien we dat er 'Correct' of 'Incorrect' komt te staan en ook welke speler het punt krijgt.<br>
+</p>
                     </p>
-                    <h3 class="step__subtitle">4.9 Code plaatsen in index.html</h3>
+                    <h3 class="step__subtitle">4.9 De functie playerTurn() afwerken</h3>
                     <p class="step__item">
                         Nu moeten we zorgen dat nadat er op een knop wordt gedrukt, de volgende ronde goed wordt gestart.<br>
-                        Wis na iedere vraag het $answerDisplay en zet de variabele isWaiting terug op false. <br>
-                        Voeg deze twee lijnen code toe aan de functie playerTurn();
+                        Wis na iedere vraag het <span class="tutorial__highlight">$answerDisplay</span> en zet de variabele isWaiting terug op false. <br>
+                        Voeg deze twee lijnen code toe aan de functie <span class="tutorial__highlight">playerTurn()</span>;
 <pre><code><span class="var">$answerDisplay</span>.<span class="attr">innerHTML</span> = <span class="string">""</span>;
 <span class="var">isWaiting</span> = <span class="tag">false</span>;
 </code></pre>
@@ -487,11 +492,11 @@
 <p class="step__item"> Nu zal de het spel volledig werken en kan je om de beurt een vraag beantwoorden.<br>
                         Het enige wat nu nog mist is een winnaar... </p>
                     </p>
-                    <h3 class="step__subtitle">4.10 functie playerwins() aanmaken</h3>
+                    <h3 class="step__subtitle">4.10 De winnende speler bepalen</h3>
                     <p class="step__item">
-                        We maken een nieuwe functie genaamd playerWins(). Deze functie geef je het id van een speler mee, 1 of 2.<br>
-                        In deze functie maken we de twee knoppen onzichtbaar, en geven we weer welke speler is gewonnen in $questionDisplay.<br>
-                        Ook maken we een manier om het spel opnieuw te spelen, door een link naar de pagina te tonen in $playerTurnDisplay.
+                        We maken een nieuwe functie genaamd <span class="tutorial__highlight">playerWins()</span>. Deze functie geef je het <span class="tutorial__highlight">id</span> van een speler mee, 1 of 2.<br>
+                        In deze functie maken we de twee knoppen onzichtbaar, en geven we weer welke speler is gewonnen in <span class="tutorial__highlight">$questionDisplay</span>.<br>
+                        Ook maken we een manier om het spel opnieuw te spelen, door een link naar de pagina te tonen in <span class="tutorial__highlight">$playerTurnDisplay</span>.
 <pre><code><span class="tag">function</span> <span class="selector">playerWins</span>(<span class="var">playerId</span>) {
     <span class="var">$trueButton</span>.<span class="attr">style</span>.<span class="attr">display</span> = <span class="string">"none"</span>;
     <span class="var">$falseButton</span>.<span class="attr">style</span>.<span class="attr">display</span> = <span class="string">"none"</span>;
@@ -500,11 +505,10 @@
 }
 </code></pre>
 
-<p class="step__item">Nu moeten we deze functie oproepen, wanneer een speler 10 puntent heeft.
-                        Deze code controleert of er een speler 10 punten heeft, en roept dan de functie playerWins() op mt het juiste Id.<br>
-                        Voeg deze code onderaan in de functie updatePoints() toe.</p>
-<pre><code>
-<span class="symbol">if</span> (<span class="var">player1Score</span> &gt; <span class="value">9</span>) {
+<p class="step__item">Nu moeten we deze functie oproepen, wanneer een speler 10 puntent heeft. <br>
+                        Deze code controleert of er een speler 10 punten heeft, en roept dan de functie <span class="tutorial__highlight">playerWins()</span> op met het juiste id.<br>
+                        Voeg deze code onderaan in de functie <span class="tutorial__highlight">updatePoints()</span> toe.</p>
+<pre><code><span class="symbol">if</span> (<span class="var">player1Score</span> &gt; <span class="value">9</span>) {
     <span class="selector">playerWins</span>(<span class="value">1</span>);
 } <span class="symbol">else if</span> (<span class="var">player2Score</span> &gt; <span class="value">9</span>) {
     <span class="selector">playerWins</span>(<span class="value">2</span>);
@@ -515,7 +519,7 @@
                 </div>
             </section>
 
-            <p>Klaar! Nu zou je een werkende 1-tegen-1 quiz minigame moeten hebben. Je kan makkelijk je eigen vragen toevoegen in het questions.js bestand</p>
+            <p class="tutorial__text tutorial__text--intro">Klaar! Nu zou je een werkende 1-tegen-1 quiz minigame moeten hebben. Je kan makkelijk je eigen vragen toevoegen in het questions.js bestand</p>
         </section>
     </main>
     

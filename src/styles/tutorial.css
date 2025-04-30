@@ -185,6 +185,19 @@ pre code {
   background-color: rgba(0, 170, 255, 0.2);
 }
 
+.tutorial__list--terms {
+  font-size: 1.2rem;
+  flex-direction: column;
+  list-style:circle;
+  margin-left: 2rem;
+}
+
+.tutorial__item--terms {
+  color: #5b5b5b;
+  font-weight: 300;
+
+}
+
 .tutorial__content {
   max-width: 95%;
   margin: 0 auto;
@@ -210,6 +223,7 @@ pre code {
 }
 
 .step__text {
+  font-size: 1.2rem;
   line-height: 1.8;
   margin-top: 2.5rem;
   color: #333;
