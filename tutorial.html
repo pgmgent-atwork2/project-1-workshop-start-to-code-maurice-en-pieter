@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <title>Tutorial | Kennis Race</title>
 
     <link rel="stylesheet" href="./src/styles/main.css">
@@ -10,7 +13,7 @@
 <body>
     <header class="header">
         <div class="header__content">
-            <h1 class="header__title">Start To Code - Kennis Race</h1>
+            <h1 class="header__title">Kennis Race - Tutorial</h1>
         </div>
 
         <a class="header__link header__link--right" href="./index.html">
@@ -19,15 +22,23 @@
     </header>
 
     <main class="tutorial">
-        <section class="tutorial__content">
-            <p class="tutorial__text">In deze tutorial maken we een quiz-minigame waarbij je 1 tegen 1 kunt spelen. De eerste speler die 10 punten behaalt, wint de game.</p>
-            <img class="tutorial__image" alt="Screenshot van Kennis Race" src="./src/assets/screenshot1.png">
-            <p class="tutorial__text">Hiervoor gebruiken we 3 codetalen</p>
-            <ul class="tutorial__list">
-                <li class="tutorial__item">HTML</li>
-                <li class="tutorial__item">CSS</li>
-                <li class="tutorial__item">JavaScript</li>
-            </ul>
+        <section class="tutorial__intro">
+            <div class="tutorial__content-wrapper">
+            <h2 class="tutorial__title">Wat gaan we maken?</h2>
+            <p class="tutorial__text tutorial__text--intro">In deze tutorial maken we een quiz-minigame waarbij je 1 tegen 1 kunt spelen. De eerste speler die 10 punten behaalt, wint de game.</p>
+             <div class="tutorial__overview">
+                <p class="tutorial__text tutorial__text--highlight">Hiervoor gebruiken we 3 codetalen:</p>
+                <ul class="tutorial__list tutorial__list--languages">
+                <li class="tutorial__item tutorial__item--language">HTML</li>
+                <li class="tutorial__item tutorial__item--language">CSS</li>
+                <li class="tutorial__item tutorial__item--language">JavaScript</li>
+                </ul>
+            </div>
+            <figure class="tutorial__figure">
+                <img class="tutorial__image tutorial__image--hero" alt="Screenshot van Kennis Race" src="./src/assets/screenshot1.png">
+                <figcaption class="tutorial__caption">Eindresultaat van de Kennis Race</figcaption>
+            </figure>
+            </div>
         </section>
         <section class="tutorial__content">
             <section class="step">

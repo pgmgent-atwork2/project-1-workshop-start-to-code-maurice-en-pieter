@@ -92,9 +92,9 @@ pre code {
     margin: 0;
     text-align: center;
     font-size: 2.5rem;
-    font-weight: 700;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-family: "Major Mono Display", monospace;
+    color: #333;
 }
 
 .header__link--right {
@@ -106,3 +106,79 @@ pre code {
     width: 2rem;
     height: 2rem;
 }
+
+.tutorial__title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    display: inline;
+    border-bottom: 2px solid #0af;;
+    padding-bottom: 0.5rem;
+}
+
+.tutorial__intro {
+    max-width: 90%; 
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+.tutorial__content-wrapper {
+    margin-top: 3rem;
+    padding: 0 2rem;
+    max-width: 95%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tutorial__text {
+    line-height: 1.8;
+    margin-top: 2.5rem;
+    color: #333;
+}
+
+.tutorial__text--intro {
+    font-size: 1.3rem;
+    letter-spacing: 0.01em;
+}
+
+.tutorial__text--highlight {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #0096ee;
+}
+
+.tutorial__figure {
+    margin: 4rem 0;
+    position: relative;
+}
+
+.tutorial__caption {
+    color: #555;
+    margin-top: 1.2rem;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.tutorial__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tutorial__item--language {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #0af;
+    font-weight: 600;
+    background-color: rgba(0, 170, 255, 0.1);
+    border-radius: 2rem;
+}
+
+.tutorial__item--language:hover {
+    background-color: rgba(0, 170, 255, 0.2);
+}
+
+
