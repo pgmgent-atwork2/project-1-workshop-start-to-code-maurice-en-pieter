@@ -255,3 +255,31 @@ pre code {
   margin-top: 2rem;
 }
 
+.nav {
+  top: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 1.2rem;
+  gap: 2.5rem;
+}
+
+.nav__link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+.nav__link:hover {
+  background-color: rgba(0, 170, 255, 0.1);
+  color: #0af;
+}
