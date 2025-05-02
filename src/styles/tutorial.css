@@ -41,6 +41,7 @@ pre code {
   color: #d4d4d4;
   display: block;
   max-width: 55rem;
+  min-width: 30rem;
   max-height: 40rem;
   padding: 1rem;
   overflow-y: scroll;
@@ -97,7 +98,7 @@ pre code {
 .header__title {
   margin: 0;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   letter-spacing: 0.1em;
   font-family: "Major Mono Display", monospace;
   color: #333;
@@ -297,12 +298,13 @@ pre:has(.step__copy) {
 }
 
 .nav__link {
-  color: #333;
+  color: #7b7b7b;
   text-decoration: none;
   font-weight: 600;
   padding: 0.6rem 1.2rem;
   border-radius: 0.25rem;
   position: relative;
+  font-size: 1.2rem;
 }
 
 .nav__link:hover {
