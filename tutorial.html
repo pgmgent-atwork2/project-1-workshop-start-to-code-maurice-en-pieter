@@ -34,7 +34,7 @@
         <section class="tutorial__intro">
             <div class="tutorial__content-wrapper">
             <h2 class="tutorial__title">Wat gaan we maken?</h2>
-            <p class="tutorial__text tutorial__text--intro">In deze tutorial maken we een quiz-minigame waarbij je 1 tegen 1 kunt spelen. De eerste speler die 10 punten behaalt, wint de game.</p>
+            <p class="tutorial__text tutorial__text--intro">In deze tutorial maken we een quiz-minigame waarbij je 1 tegen 1 kunt spelen. De eerste speler die 10 punten behaalt, wint het spel!</p>
              <div class="tutorial__overview">
                 <p class="tutorial__text tutorial__text--highlight">Hiervoor gebruiken we 3 codetalen:</p>
                 <ul class="tutorial__list tutorial__list--languages">
@@ -67,18 +67,18 @@
                     <h3 class="step__subtitle">1.3 folderstructuur</h3>
                     <p class="step__item">
                         Maak de mappen <span class="tutorial__highlight">css</span>, <span class="tutorial__highlight">data</span> en <span class="tutorial__highlight">scripts</span>, en de bestanden <span class="tutorial__highlight">main.css</span>, <span class="tutorial__highlight">app.js</span> en <span class="tutorial__highlight">index.html</span>.<br>
-                        Gebruik de knoppen bovenaan in de explorer. De map- en bestandsstructuur ziet er zo uit:
+                        Gebruik de knoppen bovenaan in de verkenner. Zorg dat de bestandsnamen exact kloppen! De map- en bestandsstructuur ziet er zo uit:
                         <img class="tutorial__image" alt="Maak map- en bestandsstructuur" src="./src/assets/screenshot4.png">
                     </p>
-                    <h3 class="step__subtitle">1.4 Installatie Live server</h3>
+                    <h3 class="step__subtitle">1.4 Installatie Live Server</h3>
                     <p class="step__item">
-                        Ga naar extensions en installeer de Live Server extensie in Visual Studio Code.
-                        <img class="tutorial__image" alt="Installeer live server extensie" src="./src/assets/screenshot5.png">
+                        Ga naar extensions en installeer de Live Server-extensie in Visual Studio Code.
+                        <img class="tutorial__image" alt="Installeer Live Server extensie" src="./src/assets/screenshot5.png">
                     </p>
-                    <h3 class="step__subtitle">1.5 Opstarten van Live server</h3>
+                    <h3 class="step__subtitle">1.5 Opstarten van Live Server</h3>
                     <p class="step__item">
                         Start de Live Server door onderaan op <span>Go Live</span> te klikken. Dit opent een nieuw browservenster met je project.
-                        <img class="tutorial__image" alt="Open de live server" src="./src/assets/screenshot6.png">
+                        <img class="tutorial__image" alt="Open de Live Server" src="./src/assets/screenshot6.png">
                     </p>
                 </div>
             </section>
@@ -89,7 +89,7 @@
                     <h3 class="step__subtitle">2.1 Code index.html</h3>
                     <p class="step__item">
                         Kopieer onderstaande code in het <span class="tutorial__highlight">index.html</span> bestand. Dit is de basis stuctuur van een webpagina.
-                        <pre><button class="step__copy" id="copy1">Copy</button>x`
+                        <pre><button class="step__copy" id="copy1">Copy</button>
     <code id="code1">&lt;<span class="tag">!DOCTYPE </span><span class="attr">html</span>&gt;
 &lt;<span class="tag">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;
 
@@ -110,7 +110,7 @@
     <span class="comment">&lt;!-- Voeg hier code toe in stappen 2.2, 2.3 en 2.4 --&gt;</span>
 
     &lt;/<span class="tag">main</span>&gt;
-    &lt;<span class="tag">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span> <span class="attr">src</span>=<span class="string">&quot;./scripts/app.js&quot;</span>&gt;&lt;/<span class="tag">script</span>&gt;
+    &lt;<span class="tag">script</span> <span class="attr"><span class="attr">src</span>=<span class="string">&quot;./scripts/app.js&quot;</span>&gt;&lt;/<span class="tag">script</span>&gt;
 &lt;/<span class="tag">body</span>&gt;
 &lt;/<span class="tag">html</span>&gt;
 </code></pre>
@@ -142,10 +142,10 @@
                         <p class="step__item">Nu zal je webpagina er zo uitzien, een titel met subtitel en twee knoppen.</p>
                         <img class="tutorial__image" alt="Start van webpagina" src="./src/assets/screenshot7.png">
                     </p>
-                    <h3 class="step__subtitle">2.4 Code toevoegen voortgangsbalken</h3>
+                    <h3 class="step__subtitle">2.4 Code toevoegen van de voortgangsbalken</h3>
                     <p class="step__item">
-                        Tussen de sections <span class="tutorial__highlight">"quiz__content"</span> en <span class="tutorial__highlight">"quiz__buttons"</span> voeg je volgende code toe.<br>
-                        Deze code zal nog niet visueels toevoegen, maar later worden dit de voortgangsbalken van de spelers.
+                        Tussen de secties <span class="tutorial__highlight">"quiz__content"</span> en <span class="tutorial__highlight">"quiz__buttons"</span> voeg je volgende code toe.<br>
+                        Deze code zal nog niets zichtbaar toevoegen, maar later worden dit de voortgangsbalken van de spelers.
                         <pre><button class="step__copy" id="copy4">Copy</button>
     <code id="code4">&lt;<span class="tag">section</span> <span class="attr">class</span>=<span class="string">&quot;quiz__progress&quot;</span>&gt;
     &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="string">&quot;progress progress--player1&quot;</span>&gt;
@@ -175,13 +175,13 @@
     &lt;/<span class="tag">div</span>&gt;
 &lt;/<span class="tag">section</span>&gt;</code></pre>
                     </p>
-
+                    <p class="step__item">Goed gedaan! Je hebt nu de basis van de pagina opgebouwd met HTML</p>
                 </div>
             </section>
             <section class="step" id="css">
                 <h2 class="step__title">Stap 3: CSS</h2>
                 <p class="step__text">CSS zorgt voor de vormgeving en stijl van je website. In deze taal spreken we elementen uit het index.html bestand aan 
-                    en geven we ze bapaalde eigenschappen zoals groottes, kleuren, positionering en font-stijlen</p>
+                    en geven we ze bepaalde eigenschappen zoals groottes, kleuren, positionering en font-stijlen</p>
                 <div class="step__content">
                     <h3 class="step__subtitle">3.1 CSS toevoegen</h3>
                     <p class="step__item">
@@ -313,7 +313,7 @@
     <span class="attr">transition</span>: <span class="value">background-color 0.3s ease, color 0.3s ease</span>;
 <span class="selector">}</span>
 </code></pre>
-                        <p class="step__item">Zo zal je pagina er uitzien. Alle kleuren kun je zelf kiezen en aanpassen, hoe je zelf het spel eruit wil laten zien.</p>
+                        <p class="step__item">Zo zal onze pagina er uitzien. Alle kleuren kun je zelf kiezen en aanpassen, hoe je zelf het spel eruit wil laten zien.</p>
                         <img class="tutorial__image" alt="Gestijlde webpagina" src="./src/assets/screenshot8.png">
 
                     </p>
@@ -325,7 +325,7 @@
                 <ul class="tutorial__list tutorial__list--terms">
                     <li class="tutorial__item tutorial__item--terms"><span class="tutorial__highlight">const & let:</span> Dit zijn variabelen. Const kan je niet aanpassen en let wel.</li>
                     <li class="tutorial__item tutorial__item--terms"><span class="tutorial__highlight">function:</span> Dit declareert een functie waarmee je code kunt uitvoeren en optioneel parameters kunt meegeven.</li>
-                    <li class="tutorial__item tutorial__item--terms"><span class="tutorial__highlight">// :</span> Dit is comentaar. Het heeft geen invloed op de code.</li>
+                    <li class="tutorial__item tutorial__item--terms"><span class="tutorial__highlight">// :</span> Dit is comentaar. Het heeft geen invloed op de uitvoering van code.</li>
                     <li class="tutorial__item tutorial__item--terms"><span class="tutorial__highlight">array :</span> Een geordende lijst waarin je meerdere waarden kunt opslaan in één variabele.</li>
                 </ul>
                 <div class="step__content">
@@ -398,11 +398,11 @@
     
 <span class="symbol">}</span>
 </code></pre>
-            <p class="step__item">Als je nu je website herlaad, wordt er elke keer een random quizvraag getoont.</p>
+            <p class="step__item">Als je nu je website herlaad, wordt er elke keer een random quizvraag getoond.</p>
                     </p>
                     <h3 class="step__subtitle">4.5 Beurt van speler laten tonen</h3>
                     <p class="step__item">
-                        Nu gaan we tonen welke speler aan de beurt is. Dit doen we aan de hand van de variabele <span class="tutorial__highlight">currentPlayer</span>.<br>
+                        Nu gaan we tonen welke speler aan de beurt is Dit doen we aan de hand van de variabele <span class="tutorial__highlight">currentPlayer</span>.<br>
                         Voeg in de functie <span class="tutorial__highlight">playerTurn()</span> deze lijn code toe.
 <pre><button class="step__copy" id="copy9">Copy</button>
     <code id="code9"><span class="var">$playerTurnDisplay</span>.<span class="attr">innerHTML</span> = <span class="string">`&lt;span class="quiz__player--${<span class="var">currentPlayer</span>}"&gt;Speler ${<span class="var">currentPlayer</span>}&lt;/span&gt; is aan de beurt`</span>;
@@ -417,13 +417,13 @@
     <code id="code10"><span class="tag">function</span> <span class="selector">initButtons</span>() {
     <span class="var">$trueButton</span>.<span class="selector">addEventListener</span>(<span class="string">"click"</span>, () => {
         <span class="symbol">if</span> (!<span class="var">isWaiting</span>) {
-            <span class="selector">alert</span>(<span class="string">'Op juist gedrukt'</span>); <span class="comment">//wordt in stap 4.8 aangepast</span>
+            <span class="selector">alert</span>(<span class="string">'Op Juist gedrukt'</span>); <span class="comment">//wordt in stap 4.8 aangepast</span>
         }
     });
 
     <span class="var">$falseButton</span>.<span class="selector">addEventListener</span>(<span class="string">"click"</span>, () => {
         <span class="symbol">if</span> (!<span class="var">isWaiting</span>) {
-            <span class="selector">alert</span>(<span class="string">'Op fout gedrukt'</span>); <span class="comment">//wordt in stap 4.8 aangepast</span>
+            <span class="selector">alert</span>(<span class="string">'Op Fout gedrukt'</span>); <span class="comment">//wordt in stap 4.8 aangepast</span>
         }
     });
 }
@@ -470,7 +470,7 @@
                         De volgende stap is zorgen dat we vragen kunnen antwoorden door de knoppen te gebruiken.<br>
                         Dit doen we door een nieuwe funtie <span class="tutorial__highlight">checkAnswer()</span> te maken. We geven deze functie 2 dingen mee; het laatst gegeven en het correcte antwoord.<br>
                         Als deze twee gelijk zjin, geven we de huidige speler een punt. Als deze niet gelijk zijn geven we de andere speler een punt. <br>
-                        Dit wordt ook getoont in de <span class="tutorial__highlight">$answerDisplay</span>. Aan het eind van de functie switchen we van speler en voeren we een <span class="tutorial__highlight">delay</span> uit van 1000ms.
+                        Dit wordt ook getoond in de <span class="tutorial__highlight">$answerDisplay</span>. Aan het eind van de functie switchen we van speler en voeren we een <span class="tutorial__highlight">delay</span> uit van 1000ms.
 <pre><button class="step__copy" id="copy12">Copy</button>
     <code id="code12"><span class="tag">function</span> <span class="selector">checkAnswer</span>(<span class="var">givenAnswer</span>, <span class="var">correctAnswer</span>) {
     <span class="var">isWaiting</span> = <span class="tag">true</span>;
@@ -489,7 +489,7 @@
 }
 </code></pre>
 
-<p class="step__item">Voer deze functie uit in plaat van de geschreven alert in de <span class="tutorial__highlight">initButtons()</span> functie.<br>
+<p class="step__item">Voer deze functie uit in plaats van de geschreven alert in de <span class="tutorial__highlight">initButtons()</span> functie.<br>
                         Geef true mee als er Juist knop wordt gedrukt, en false mee als er op de Fout knop wordt gedrukt.</p>
 <pre><code><span class="selector">checkAnswer</span>(<span class="tag">true</span>, <span class="var">currentAnswer</span>);
 </code></pre>
@@ -508,7 +508,7 @@
 <span class="var">isWaiting</span> = <span class="tag">false</span>;
 </code></pre>
 
-<p class="step__item"> Nu zal de het spel volledig werken en kan je om de beurt een vraag beantwoorden.<br>
+<p class="step__item"> Nu zal het spel volledig werken en kan je om de beurt een vraag beantwoorden.<br>
                         Het enige wat nu nog mist is een winnaar... </p>
                     </p>
                     <h3 class="step__subtitle">4.10 De winnende speler bepalen</h3>
@@ -525,7 +525,7 @@
 }
 </code></pre>
 
-<p class="step__item">Nu moeten we deze functie oproepen, wanneer een speler 10 puntent heeft. <br>
+<p class="step__item">Nu moeten we deze functie oproepen, wanneer een speler 10 puntent heeft behaald. <br>
                         Deze code controleert of er een speler 10 punten heeft, en roept dan de functie <span class="tutorial__highlight">playerWins()</span> op met het juiste id.<br>
                         Voeg deze code onderaan in de functie <span class="tutorial__highlight">updatePoints()</span> toe.</p>
 <pre><button class="step__copy" id="copy15">Copy</button>
@@ -536,11 +536,14 @@
 }
 </code></pre>
                     </p>
+                    <p class="step__item">Nu zou alles correct moeten werken!</p>
                 </div>
             </section>
 
             <p class="tutorial__text tutorial__text--intro">Klaar! Nu heb je een werkende 1-tegen-1 quiz minigame moeten hebben. Je kan makkelijk je eigen vragen toevoegen in het questions.js bestand</p>
-            <img class="tutorial__image tutorial__image--hero" alt="Screenshot van Kennis Race" src="./src/assets/screenshot1.png">
+            <figure class="tutorial__figure">
+                <img class="tutorial__image tutorial__image--hero" alt="Screenshot van Kennis Race" src="./src/assets/screenshot1.png">
+            </figure>
         </section>
     </main>
     
