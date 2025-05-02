@@ -10,7 +10,7 @@ Welcome to Kennis Race - an exciting interactive quiz game that challenges playe
 - 👥 Real-time two-player competition
 - 📚 Detailed beginner-friendly tutorial
 - ❓ 50+ thought-provoking true/false questions
-- 🎨 Modern, responsive design
+- 🎨 Modern design
 
 ## 🔗 Github Pages
 
