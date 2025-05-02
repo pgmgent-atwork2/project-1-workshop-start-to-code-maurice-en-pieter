@@ -59,7 +59,7 @@ Contributions welcome! Feel free to:
 - Suggest new features
 - Submit pull requests
 
-## 🖋️ Authors
+## 🖋️ Authors - Github Profiles
 
 - [Maurice Halsberghe](https://github.com/mauriceHalsberghe)
 - [Pieter Luypaert](https://github.com/PieterLuypaert)
