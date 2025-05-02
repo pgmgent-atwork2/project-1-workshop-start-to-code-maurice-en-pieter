@@ -12,11 +12,9 @@ Welcome to Kennis Race - an exciting interactive quiz game that challenges playe
 - ❓ 50+ thought-provoking true/false questions
 - 🎨 Modern, responsive design
 
-## 🔗 Quick Links
+## 🔗 Github Pages
 
 - [Play Game](https://pgmgent-atwork2.github.io/project-1-workshop-start-to-code-maurice-en-pieter/)
-- [Tutorial](#tutorial)
-- [Project Structure](#project-structure)
 
 ## 🎮 How to Play
 
@@ -63,8 +61,8 @@ Contributions welcome! Feel free to:
 
 ## 🖋️ Authors
 
-- Maurice
-- Pieter
+- Maurice Halsberghe
+- Pieter Luypaert
 
 ## 🔗 Additional Resources
 
