@@ -4,17 +4,17 @@
 
 Welcome to Kennis Race - an exciting interactive quiz game that challenges players in a head-to-head battle of knowledge! Two players take turns answering true/false questions, racing to be the first to reach 10 points.
 
-## ✨ Key Features
-
-- 🌊 Dynamic animated wave background
-- 👥 Real-time two-player competition
-- 📚 Detailed beginner-friendly tutorial
-- ❓ 50+ thought-provoking true/false questions
-- 🎨 Modern design
-
 ## 🔗 Github Pages
 
 - [Play Game](https://pgmgent-atwork2.github.io/project-1-workshop-start-to-code-maurice-en-pieter/)
+
+## ✨ Key Features
+
+- 👥 Real-time two-player competition
+- 📚 Detailed beginner-friendly tutorial
+- 🎨 Modern design
+- ❓ 50+ thought-provoking true/false questions
+- 🌊 Dynamic animated wave background
 
 ## 🎮 How to Play
 
@@ -29,6 +29,7 @@ Welcome to Kennis Race - an exciting interactive quiz game that challenges playe
     - HTML5
     - CSS3 (Custom properties, Advanced selectors)
     - JavaScript (ES6+)
+    - JSON
 
 ## 📚 Tutorial
 
