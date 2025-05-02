@@ -61,8 +61,8 @@ Contributions welcome! Feel free to:
 
 ## 🖋️ Authors
 
-- Maurice Halsberghe
-- Pieter Luypaert
+- [Maurice Halsberghe](https://github.com/mauriceHalsberghe)
+- [Pieter Luypaert](https://github.com/PieterLuypaert)
 
 ## 🔗 Additional Resources
 
